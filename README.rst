@@ -2,6 +2,10 @@
 secken-sdk
 ===============================
 
+.. image:: https://badges.gitter.im/mozillazg/secken-sdk.svg
+   :alt: Join the chat at https://gitter.im/mozillazg/secken-sdk
+   :target: https://gitter.im/mozillazg/secken-sdk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 .. image:: https://img.shields.io/pypi/v/secken-sdk.svg
         :target: https://pypi.python.org/pypi/secken-sdk
 
