@@ -29,7 +29,7 @@ def wrap_response(response):
     return response.json()
 
 
-class SeckenSDK(object):
+class Secken(object):
     API_BASE = 'https://api.sdk.yangcong.com'
     response_handler = wrap_response
 
@@ -106,6 +106,9 @@ class SeckenSDK(object):
         if self.response_handler is not None:
             response = self.__class__.response_handler(response)
         return response
+
+    def __repr__(self):
+        return '<{0}: {1}>'.format(self.__class__.__name__, self.app_id)
 
 
 def gen_signature(app_key, **params):

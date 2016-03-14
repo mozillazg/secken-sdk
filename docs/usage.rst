@@ -4,4 +4,4 @@ Usage
 
 To use secken-sdk in a project::
 
-    import secken-sdk
+    import secken_sdk

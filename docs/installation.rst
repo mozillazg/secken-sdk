@@ -6,7 +6,7 @@ Installation
 
 At the command line::
 
-    $ easy_install secken-sdk
+    $ pip install secken-sdk
 
 Or, if you have virtualenvwrapper installed::
 

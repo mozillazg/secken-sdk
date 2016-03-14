@@ -46,30 +46,26 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 secken-sdk tests
+	flake8 secken_sdk tests
 
 test:
-	python setup.py test
+	--cov secken_sdk tests --cov-report=term-missing
 
 test-all:
 	tox
 
-coverage:
-	coverage run --source secken-sdk setup.py test
+coverage: test
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
 docs:
-	rm -f docs/secken-sdk.rst
+	rm -f docs/secken_sdk.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ secken-sdk
+	sphinx-apidoc -o docs/ secken_sdk
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
-
-servedocs: docs
-	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
 release: clean
 	python setup.py sdist upload

@@ -78,7 +78,7 @@ Ready to contribute? Here's how to set up `secken-sdk` for local development.
 
 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
 
-    $ flake8 secken-sdk tests
+    $ flake8 secken_sdk tests
     $ python setup.py test
     $ tox
 
@@ -110,4 +110,4 @@ Tips
 
 To run a subset of tests::
 
-    $ python -m unittest tests.test_secken-sdk
+    $ py.test tests/test_secken_sdk.py
